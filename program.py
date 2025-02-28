@@ -1,4 +1,6 @@
-for num in range(1, 101, 2): 
-    print(num)
-
+a=input("enter name1:")
+b=input("enter name2:")
+a,b=b,a
+print("a:",a)
+print("b:",b)
 
