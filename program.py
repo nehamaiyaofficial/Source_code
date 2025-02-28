@@ -1,6 +1,10 @@
- num = 1
-print("numbers divisible by 5 from 1 to 100:")
-while num <= 100:
-    if num % 5 == 0:
-        print(num, end=" ")
-    num += 1
+num = int(input("Enter a number: "))
+factorial = 1
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+elif num == 0:
+    print("The factorial of 0 is 1")
+else:
+    for i in range(1, num + 1):
+        factorial *= i
+    print(f"The factorial of {num} is {factorial}")
