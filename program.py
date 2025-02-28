@@ -1,18 +1,14 @@
-print("Simple Calculator")
-print("Select an operation:")
-print("1. Addition (+)")
-print("2. Subtraction (-)")
-print("3. Multiplication (*)")
-print("4. Division (/)")
-choice = input("Enter your choice (1/2/3/4): ")
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-operations = {
-    "1": num1 + num2,
-    "2": num1 - num2,
-    "3": num1 * num2,
-    "4": num1 / num2 if num2 != 0 else "Error! Division by zero."
-}
-result = operations.get(choice, "Invalid choice!")
-print("Result:", result)
+balance = float(input("Enter your bank account balance: "))
+withdraw_amount = float(input("Enter the amount you want to withdraw: "))
+if balance >= withdraw_amount:
+    if withdraw_amount >= 1000:
+        print("Transaction Successful! ₹", withdraw_amount, "withdrawn.")
+        balance -= withdraw_amount  
+        print("Remaining Balance: ₹", balance)
+    else:
+        print("Error! Minimum withdrawal amount is ₹1000.")
+else:
+    print("Insufficient balance! Transaction failed.")
+
+
 
